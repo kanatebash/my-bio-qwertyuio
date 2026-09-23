@@ -1,13 +1,102 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-bio-qwertyuio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фуллстек Инженер | Искусственный Интеллект</title>
+    <!-- Подключаем Tailwind CSS напрямую для идеальных стилей -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #030712;
+            overflow-x: hidden;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.05; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.15; transform: translate(-50%, -50%) scale(1.1); }
+        }
+        .animate-pulse-slow-1 {
+            animation: pulse-slow 6s ease-in-out infinite;
+        }
+        .animate-pulse-slow-2 {
+            animation: pulse-slow 8s ease-in-out infinite 2s;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-100 flex items-center justify-center p-4 relative">
+
+    <!-- Неоновое космическое свечение на фоне -->
+    <div class="absolute top-1/4 left-1/2 w-[500px] h-[500px] bg-blue-500 rounded-full blur-[120px] pointer-events-none animate-pulse-slow-1"></div>
+    <div class="absolute bottom-1/4 left-1/2 w-[400px] h-[400px] bg-indigo-500 rounded-full blur-[120px] pointer-events-none animate-pulse-slow-2"></div>
+
+    <!-- Главный премиум контейнер (Эффект матового стекла) -->
+    <div class="max-w-xl w-full bg-slate-900/40 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-8 shadow-2xl relative z-10 animate-fade-in">
+        
+        <!-- Аватар с неоновым градиентом -->
+        <div class="flex justify-center mb-6">
+            <div class="relative group cursor-pointer">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full blur opacity-75 transition duration-500"></div>
+                <img src="https://placeholder.com" alt="Avatar" class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-900">
+            </div>
+        </div>
+
+        <!-- Заголовки -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                Фуллстек Инженер
+            </h1>
+            <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mt-2 flex items-center justify-center gap-1.5">
+                ⚡️ Искусственный Интеллект
+            </p>
+        </div>
+
+        <!-- Текст предложения / БИО -->
+        <div class="bg-slate-950/60 border border-slate-800/50 rounded-2xl p-5 mb-8 text-slate-300 leading-relaxed text-sm text-justify space-y-4">
+            <div class="flex items-center gap-2 text-blue-500 font-mono text-xs border-b border-slate-800/80 pb-2">
+                <span>> root@system:~# info</span>
+            </div>
+            <p>
+                Программист в сфере искусственного интеллекта. Выступал ключевым партнёром в масштабных ИИ-проектах и помогал в их создании с самых ранних этапов разработки архитектуры.
+            </p>
+            <p>
+                Сейчас активно занимается развитием технологической платформы <span class="text-white font-semibold underline decoration-blue-500/50">Kalshi</span>, где лично спроектировал и внедрил уникальную технологию, интегрировав в ядро базы данных более <span class="text-blue-400 font-bold">7000 базовых, мощных и сложных кодов</span>.
+            </p>
+            <div class="flex items-center gap-1.5 text-emerald-400 text-xs font-mono pt-1">
+                <span>✓ Производительность системы: Оптимальная</span>
+            </div>
+        </div>
+
+        <!-- Кнопки контактов (Уже с твоими ссылками) -->
+        <div class="space-y-4">
+            <a href="https://t.me" target="_blank" class="flex items-center justify-between w-full bg-slate-800/40 border border-slate-700/50 text-white px-5 py-4 rounded-xl font-medium transition-all hover:bg-slate-800 hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(59,130,246,0.2)] group">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-blue-500/10 text-blue-400 rounded-lg group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        ✈️
+                    </div>
+                    <span>Связаться в Telegram</span>
+                </div>
+                <span class="text-slate-500 group-hover:text-slate-300">→</span>
+            </a>
+
+            <a href="https://github.com" target="_blank" class="flex items-center justify-between w-full bg-slate-800/40 border border-slate-700/50 text-white px-5 py-4 rounded-xl font-medium transition-all hover:bg-slate-800 hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(99,102,241,0.2)] group">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                        💻
+                    </div>
+                    <span>Портфолио GitHub</span>
+                </div>
+                <span class="text-slate-500 group-hover:text-slate-300">→</span>
+            </a>
+        </div>
+    </div>
+</body>
 </html>
