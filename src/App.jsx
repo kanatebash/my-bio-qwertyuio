@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Cpu, Database, Send, Github, ShieldCheck } from 'lucide-react';
+import { Terminal, Cpu, Database, Send, Github as GitHubIcon, ShieldCheck } from 'lucide-react';
 
 function App() {
   return (
@@ -80,7 +80,7 @@ function App() {
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg group-hover:bg-indigo-500 group-hover:text-white transition-colors">
-                <Github size={18} />
+                <GitHubIcon size={18} />
               </div>
               <span>Портфолио GitHub</span>
             </div>
