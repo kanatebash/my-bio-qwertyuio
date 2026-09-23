@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Cpu, Database, Send, Github as GitHubIcon, ShieldCheck } from 'lucide-react';
+import { Terminal, Cpu, Send, Code, ShieldCheck } from 'lucide-react';
 
 function App() {
   return (
     <div className="min-h-screen bg-[#030712] text-slate-100 flex items-center justify-center p-4 relative overflow-hidden">
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none" />
 
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
@@ -47,7 +47,7 @@ function App() {
             Программист в сфере искусственного интеллекта. Выступал ключевым партнёром в масштабных ИИ-проектах и помогал в их создании с самых ранних этапов разработки архитектуры.
           </p>
           <p>
-            Сейчас активно занимается развитием технологической платформы <span className="text-white font-semibold underline decoration-blue-500/50">Kalshi</span>, где лично спроектировал и внедрил unique технологию, интегрировав в ядро базы данных более <span className="text-blue-400 font-bold">7000 базовых, мощных и сложных кодов</span>.
+            Сейчас активно занимается развитием технологической платформы <span className="text-white font-semibold underline decoration-blue-500/50">Kalshi</span>, где лично спроектировал и внедрил уникальную технологию, интегрировав в ядро базы данных более <span className="text-blue-400 font-bold">7000 базовых, мощных и сложных кодов</span>.
           </p>
           <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-mono pt-1">
             <ShieldCheck size={14} /> Производительность системы: Оптимальная
@@ -80,7 +80,7 @@ function App() {
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg group-hover:bg-indigo-500 group-hover:text-white transition-colors">
-                <GitHubIcon size={18} />
+                <Code size={18} />
               </div>
               <span>Портфолио GitHub</span>
             </div>
